@@ -48,7 +48,7 @@ type ProjectInitParameters struct {
 
 	// (Number) To enable project as Proxy Cache.
 	// +crossplane:generate:reference:type=github.com/thisisnttheway/provider-harbor/apis/namespaced/registry/v1alpha1.Registry
-	// +crossplane:generate:reference:extractor=github.com/globallogicuki/provider-harbor/config/common.ExtractRegistryID()
+	// +crossplane:generate:reference:extractor=github.com/thisisnttheway/provider-harbor/config/common.ExtractRegistryID()
 	RegistryID *float64 `json:"registryId,omitempty" tf:"registry_id,omitempty"`
 
 	// Reference to a Registry in registry to populate registryId.
@@ -164,7 +164,7 @@ type ProjectParameters struct {
 
 	// (Number) To enable project as Proxy Cache.
 	// +crossplane:generate:reference:type=github.com/thisisnttheway/provider-harbor/apis/namespaced/registry/v1alpha1.Registry
-	// +crossplane:generate:reference:extractor=github.com/globallogicuki/provider-harbor/config/common.ExtractRegistryID()
+	// +crossplane:generate:reference:extractor=github.com/thisisnttheway/provider-harbor/config/common.ExtractRegistryID()
 	// +kubebuilder:validation:Optional
 	RegistryID *float64 `json:"registryId,omitempty" tf:"registry_id,omitempty"`
 

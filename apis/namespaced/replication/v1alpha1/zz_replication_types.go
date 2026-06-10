@@ -89,7 +89,7 @@ type ReplicationInitParameters struct {
 
 	// (String) Specify the destination namespace. if empty, the resource will be put under the same namespace as the source.
 	// +crossplane:generate:reference:type=github.com/thisisnttheway/provider-harbor/apis/namespaced/project/v1alpha1.Project
-	// +crossplane:generate:reference:extractor=github.com/globallogicuki/provider-harbor/config/common.ExtractProjectName()
+	// +crossplane:generate:reference:extractor=github.com/thisisnttheway/provider-harbor/config/common.ExtractProjectName()
 	DestNamespace *string `json:"destNamespace,omitempty" tf:"dest_namespace,omitempty"`
 
 	// Reference to a Project in project to populate destNamespace.
@@ -120,7 +120,7 @@ type ReplicationInitParameters struct {
 
 	// (Number) The registry ID of the Registry Endpoint.
 	// +crossplane:generate:reference:type=github.com/thisisnttheway/provider-harbor/apis/namespaced/registry/v1alpha1.Registry
-	// +crossplane:generate:reference:extractor=github.com/globallogicuki/provider-harbor/config/common.ExtractRegistryID()
+	// +crossplane:generate:reference:extractor=github.com/thisisnttheway/provider-harbor/config/common.ExtractRegistryID()
 	RegistryID *float64 `json:"registryId,omitempty" tf:"registry_id,omitempty"`
 
 	// Reference to a Registry in registry to populate registryId.
@@ -215,7 +215,7 @@ type ReplicationParameters struct {
 
 	// (String) Specify the destination namespace. if empty, the resource will be put under the same namespace as the source.
 	// +crossplane:generate:reference:type=github.com/thisisnttheway/provider-harbor/apis/namespaced/project/v1alpha1.Project
-	// +crossplane:generate:reference:extractor=github.com/globallogicuki/provider-harbor/config/common.ExtractProjectName()
+	// +crossplane:generate:reference:extractor=github.com/thisisnttheway/provider-harbor/config/common.ExtractProjectName()
 	// +kubebuilder:validation:Optional
 	DestNamespace *string `json:"destNamespace,omitempty" tf:"dest_namespace,omitempty"`
 
@@ -253,7 +253,7 @@ type ReplicationParameters struct {
 
 	// (Number) The registry ID of the Registry Endpoint.
 	// +crossplane:generate:reference:type=github.com/thisisnttheway/provider-harbor/apis/namespaced/registry/v1alpha1.Registry
-	// +crossplane:generate:reference:extractor=github.com/globallogicuki/provider-harbor/config/common.ExtractRegistryID()
+	// +crossplane:generate:reference:extractor=github.com/thisisnttheway/provider-harbor/config/common.ExtractRegistryID()
 	// +kubebuilder:validation:Optional
 	RegistryID *float64 `json:"registryId,omitempty" tf:"registry_id,omitempty"`
 
