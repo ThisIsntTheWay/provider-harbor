@@ -1,4 +1,4 @@
-module github.com/crossplane/upjet-provider-template
+module github.com/thisisnttheway/provider-harbor
 
 go 1.25.9
 
@@ -10,6 +10,8 @@ require (
 	github.com/crossplane/crossplane-runtime/v2 v2.2.1
 	github.com/crossplane/crossplane-tools v0.0.0-20251017183449-dd4517244339
 	github.com/crossplane/upjet/v2 v2.2.1-0.20260414070754-c6d5213346ac
+	github.com/globallogicuki/provider-harbor v0.2.3
+	github.com/hashicorp/terraform-plugin-sdk/v2 v2.37.0
 	github.com/pkg/errors v0.9.1
 	google.golang.org/grpc v1.79.3
 	k8s.io/api v0.35.3
@@ -29,6 +31,7 @@ require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/blang/semver/v4 v4.0.0 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
+	github.com/crossplane/crossplane-runtime v1.14.0-rc.0.0.20231011070344-cc691421c2e5 // indirect
 	github.com/dave/jennifer v1.7.1 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/emicklei/go-restful/v3 v3.13.0 // indirect
@@ -73,7 +76,6 @@ require (
 	github.com/hashicorp/terraform-plugin-framework v1.15.0 // indirect
 	github.com/hashicorp/terraform-plugin-go v0.28.0 // indirect
 	github.com/hashicorp/terraform-plugin-log v0.9.0 // indirect
-	github.com/hashicorp/terraform-plugin-sdk/v2 v2.37.0 // indirect
 	github.com/hashicorp/terraform-registry-address v0.2.5 // indirect
 	github.com/hashicorp/terraform-svchost v0.1.1 // indirect
 	github.com/hashicorp/yamux v0.1.1 // indirect

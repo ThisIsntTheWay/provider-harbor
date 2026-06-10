@@ -1,3 +1,7 @@
+/*
+Copyright 2021 Upbound Inc.
+*/
+
 package v1alpha1
 
 import (
@@ -7,7 +11,7 @@ import (
 
 // Package type metadata.
 const (
-	Group   = "template.crossplane.io"
+	Group   = "harbor.crossplane.io"
 	Version = "v1alpha1"
 )
 
@@ -18,5 +22,3 @@ var (
 	// SchemeBuilder is used to add go types to the GroupVersionKind scheme
 	SchemeBuilder = &scheme.Builder{GroupVersion: SchemeGroupVersion}
 )
-
-func init() {}
