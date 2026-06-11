@@ -66,6 +66,7 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 		}
 
 		// Set credentials in Terraform provider configuration.
+		ps.Configuration = terraform.ProviderConfiguration{}
 		for _, jsonKey := range credentialsKeys {
 			if v, exists := creds[jsonKey]; exists {
 				ps.Configuration[jsonKey] = v
