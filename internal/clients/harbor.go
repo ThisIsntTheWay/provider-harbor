@@ -22,10 +22,21 @@ const (
 	errTrackUsage           = "cannot track ProviderConfig usage"
 	errExtractCredentials   = "cannot extract credentials"
 	errUnmarshalCredentials = "cannot unmarshal harbor credentials as JSON"
+)
 
-	credentialsKeyUrl      = "url"
-	credentialsKeyUser     = "username"
-	credentialsKeyPassword = "password"
+var (
+	// Provider config schema, entries correspond to keys in the credentials JSON.
+	// https://registry.terraform.io/providers/goharbor/harbor/latest/docs
+	credentialsKeys []string = []string{
+		"url",
+		"username",
+		"password",
+		"robot_prefix",
+		"api_version",
+		"bearer_token",
+		"session_id",
+		"insecure",
+	}
 )
 
 // TerraformSetupBuilder builds Terraform a terraform.SetupFn function which
@@ -55,16 +66,12 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 		}
 
 		// Set credentials in Terraform provider configuration.
-		ps.Configuration = map[string]any{}
-		if v, ok := creds[credentialsKeyUrl]; ok {
-			ps.Configuration[credentialsKeyUrl] = v
+		for _, jsonKey := range credentialsKeys {
+			if v, exists := creds[jsonKey]; exists {
+				ps.Configuration[jsonKey] = v
+			}
 		}
-		if v, ok := creds[credentialsKeyUser]; ok {
-			ps.Configuration[credentialsKeyUser] = v
-		}
-		if v, ok := creds[credentialsKeyPassword]; ok {
-			ps.Configuration[credentialsKeyPassword] = v
-		}
+
 		return ps, nil
 	}
 }
