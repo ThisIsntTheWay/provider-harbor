@@ -9,7 +9,7 @@ Based on this Terraform provider:
 https://registry.terraform.io/providers/goharbor/harbor/latest/docs
 
 Partly based on code by GlobalLogic UK&I:  
-https://github.com/thisisnttheway/provider-harbor
+https://github.com/globallogicuki/provider-harbor
 
 ## Developing
 
